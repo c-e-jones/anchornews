@@ -54,6 +54,9 @@ class Post(models.Model):
     objects = models.Manager()
     status = models.IntegerField(choices=PUBLISH_CONTROL, default=0)
 
+    class Meta:
+        ordering = ["created_on"]
+
     def __str__(self):
         return f'{self.title} | written by {self.author}'
 
