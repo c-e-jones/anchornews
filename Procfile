@@ -1,0 +1,1 @@
+web: gunicorn anchor_news.wsgi
