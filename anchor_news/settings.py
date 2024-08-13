@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-q&$$31ktpbm_fo&+!eb&7+p#f9w8fl2r(bi%2(ti**gzgrmm0%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://8000-cejones-anchornews-gv2x620v5dz.ws.codeinstitute-ide.net',
+                '.gitpod.io',
+                '.herokuapp.com',
+                '.codeinstitute-ide.net',]
 
 
 # Application definition
