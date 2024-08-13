@@ -55,6 +55,13 @@ class Post(models.Model):
     status = models.IntegerField(choices=PUBLISH_CONTROL, default=0)
 
 
+    class Meta:
+        ordering = ['-created_on-']
+
+    def __str__(self):
+        return f'{self.title} | written by {self.author}'
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
