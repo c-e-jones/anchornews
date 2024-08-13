@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views import generic
+from .models import Post
+from .models import Comment
 
 # Create your views here.
-class HomePage(TemplateView):
-    """
-    Displays home page"
-    """
-    template_name = 'index.html'
+
+class PostList(generic.ListView):
+    model = Post
