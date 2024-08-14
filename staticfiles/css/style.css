@@ -69,33 +69,7 @@
 
 }
 
-/*** Overrides for Bootstrap padding and margins which always break ***/
-
-.container-override {
-    min-width: 100%;
-}
-
-.padding-margin-override {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-.row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
-
-.container {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
-
-.container-fluid {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-}
+/*** mt-3 override ***/
 
 .mt-3 {
     margin-top: 25%;
