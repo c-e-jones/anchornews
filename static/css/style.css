@@ -118,6 +118,8 @@
 #nav-link {
     padding: 0;
     padding-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*** Item styling ***/
