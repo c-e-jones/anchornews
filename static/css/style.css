@@ -116,18 +116,15 @@
 .page-link {
     background-color: #c0d7ff;
     border-color: #1F71FF;
-    border-style: dashed;
     border-radius: 20px;
-    color: #3B403B;
+    color: #c0d7ff;
 }
 
 .page-link {
-    background-color: #3B403B;
+    background-color: #c0d7ff;
     border-color: #1F71FF;
-    border-style: dashed;
     border-radius: 20px;
-    color: #c0d7ff;
-    text-decoration: underline;
+    color: #74a7ff;
 }
 
 /*** footer styling ***/
