@@ -60,13 +60,14 @@
     min-width: 100%;
     left: -2px;
     background-color: #534850;
+    border-radius: 20px;
+    padding-left: 30px;
 }
 
 .author {
     color: #ffffff;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300px;
-
 }
 
 /*** mt-3 override ***/
