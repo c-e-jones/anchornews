@@ -22,13 +22,13 @@
 
 .nav-text-links-top {
     color: #ffffff;
-    font-family: 'Noto Sanss', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
 }
 
 .nav-text-links-bottom {
     color: #3B403B;
-    font-family: 'Noto Sanss', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
 }
 
@@ -57,9 +57,16 @@
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 30%;
+    min-width: 100%;
     left: -2px;
     background-color: #32292F;
+}
+
+.author {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300px;
+        
 }
 
 /*** Overrides for Bootstrap padding and margins which always break ***/
