@@ -42,9 +42,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                     {% if user.is_authenticated %}
-                    <p class="text-end">You are logged in as {{ user }}</p>
+                    <p class="nav-link nav-text-links-top nav-text-padding-right">You are logged in as {{ user }}</p>
                     {% else %}
-                    <p class="text-end">You are not logged in</p>
+                    <p class="nav-link nav-text-links-top nav-text-padding-right">You are not logged in</p>
                     {% endif %}
                 </ul>
             </div>
