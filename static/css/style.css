@@ -120,6 +120,7 @@
 .news-item {
     border: none;
     background-color: transparent;
+    width: 60vw;
 }
 
 .item-container {
@@ -225,14 +226,12 @@
     border-right: 1px solid;
     border-color: #5348504f;
     min-height: auto;
-    width: 100%;
 }
 
 .marginator-right-index {
     border-left: 1px solid;
     border-color: #5348504f;
     min-height: auto;
-    width: 100%;
 }
 
 /*** footer styling ***/
