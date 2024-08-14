@@ -238,6 +238,21 @@
     padding-top: 300px;
 }
 
+.login-style {
+        color: #505750;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+.login-style-big {
+        color: #505750;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+
 /*** mt-3 override ***/
 
 .mt-3 {
