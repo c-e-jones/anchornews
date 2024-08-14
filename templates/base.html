@@ -1,6 +1,9 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg" id="bg-brum-blue-1">
         <div class="container-fluid">
-            <a class="navbar-brand nav-text-title nav-text-padding-left" href="{% url 'home' %'}"><i class="fa-solid fa-anchor white-anchor"></i> Birmingham Anchor</a>
+            <a class="navbar-brand nav-text-title nav-text-padding-left" href="{% url 'home' %}"><i class="fa-solid fa-anchor white-anchor"></i> Birmingham Anchor</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -38,17 +41,19 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link nav-text-links-top {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link nav-text-links-top nav-text-padding-right {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link nav-text-links-top nav-text-padding-right {% if request.path == logout_url %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text-links-top" href="#">About</a>
+                        <a class="nav-link nav-text-links-top nav-text-padding-right {% if request.path == signup_url %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-text-links-top" href="#">Register</a>
+                        <a class="nav-link nav-text-links-top nav-text-padding-right {% if request.path == login_url %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-text-links-top nav-text-padding-right" href="#">Login</a>
-                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -58,7 +63,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link nav-text-links-bottom" href="#">Local Government</a>
+                        <a class="nav-link nav-text-links-bottom {% if request.path == local_government_url %}active{% endif %}" href="{% url 'local_government'%}">Local Government</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-text-links-bottom" href="#">National News</a>
@@ -108,7 +113,7 @@
 
     <!-- Footer -->
     <footer class="footer footer-bottom">
-        <div class="container-fluid footer-container">
+        <div class="container-fluid">
             <div class="row" id="bg-brum-blue-1">
                 <div class="col-3 left-footer">
                     <p class="footer-text nav-text-padding-left">Copyright of Birmingham Anchor</p>
