@@ -10,8 +10,8 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="news-item mb-4">
+                <div class="col-2 marginator-right">
+                    <div class="col-8 news-item mb-4">
                         <div class="card-body">
                             <div class="item-container">
                                 <div class="image-flash">
@@ -30,6 +30,7 @@
                             </p>
                         </div>
                     </div>
+                    <div class="col-2"></div>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
             </div>
