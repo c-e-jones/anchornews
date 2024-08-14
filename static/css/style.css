@@ -250,6 +250,8 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
     font-size: 40px;
+    margin-top: 50px;
+    align-content: center;
 }
 
 .marginator-top {
