@@ -95,7 +95,14 @@
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 30px;
+}
+
+.post-date {
+    color: #505750;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
 }
 
 /*** Nav inner element positioning ***/
@@ -154,14 +161,14 @@
 .item-text-byline {
     font-family: 'Noto Sans', sans-serif;
     color: #505750;
-    font-weight: 400;
+    font-weight: 500;
     min-height: 100px;
 }
 
 .item-text-genre {
     font-family: 'Noto Sans', sans-serif;
     color: #505750;
-    font-weight: 400;
+    font-weight: 200;
     min-height: 100px;
 }
 
