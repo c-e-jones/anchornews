@@ -27,10 +27,31 @@
     font-weight: 600;
 }
 
+.nav-text-title:hover {
+    color: #a7a7a7;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.nav-text-links-top:hover {
+    color: #a7a7a7;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
 .nav-text-links-bottom {
     color: #3B403B;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
+}
+
+.nav-text-links-bottom:hover {
+    color: #1d1f1d;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 
