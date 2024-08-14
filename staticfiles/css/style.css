@@ -238,14 +238,14 @@
     padding-top: 300px;
 }
 
-.login-style {
+#login-style {
         color: #505750;
         font-family: 'Noto Sans', sans-serif;
         font-weight: 400;
         font-size: 30px;
     }
 
-.login-style-big {
+#login-style-big {
         color: #505750;
         font-family: 'Noto Sans', sans-serif;
         font-weight: 600;
