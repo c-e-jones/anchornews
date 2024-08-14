@@ -32,9 +32,19 @@
     font-weight: 600;
 }
 
+
+/*** Nav inner element positioning ***/
+
+.nav-text-padding-left {
+    padding-left:50px;
+}
+
+.nav-text-padding-right {
+    padding-right:50px;
+}
+
 /*** Overrides for Bootstrap padding and margins which always break ***/
 
-/** Container override **/
 .container-override {
     min-width: 100%;
 }
