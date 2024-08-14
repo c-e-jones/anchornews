@@ -10,7 +10,7 @@ class PostAdmin(SummernoteModelAdmin):
     search_fields = ['title', 'author']
     list_filter = ('status', 'created_on', 'genre')
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('byline', 'body')
+    summernote_fields = ('body')
 
 
 admin.site.register(Comment)
