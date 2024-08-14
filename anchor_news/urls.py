@@ -23,5 +23,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('news.urls'), name='news-urls'),
-    path('accounts/profile/', views.profile, name='profile')
 ]
