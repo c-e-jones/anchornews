@@ -91,11 +91,11 @@
 /*** Nav inner element positioning ***/
 
 .nav-text-padding-left {
-    padding-left: 50px;
+    padding-left:50px;
 }
 
 .nav-text-padding-right {
-    padding-right: 50px;
+    padding-right:50px;
 }
 
 /*** Item styling ***/
@@ -182,14 +182,12 @@
 
 /*** footer styling ***/
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-footer {
-    margin-top: auto;
+.footer-bottom {
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 /*** mt-3 override ***/
@@ -197,3 +195,4 @@ footer {
 .mt-3 {
     margin-top: 25%;
 }
+
