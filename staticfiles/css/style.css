@@ -264,6 +264,22 @@
     min-height: auto;
 }
 
+#account-button-style {
+    background-color: #c0d7ff;
+    border-color: #1F71FF;
+    border-style: dashed;
+    border-radius: 20px;
+    color: #3B403B;
+}
+
+#account-button-style:hover {
+    background-color: #3B403B;
+    border-color: #1F71FF;
+    border-style: dashed;
+    border-radius: 20px;
+    color: #c0d7ff;
+}
+
 
 /*** mt-3 override ***/
 
