@@ -73,12 +73,12 @@
 
 .post-link {
     text-decoration: none;
-    color: #3B403B;
+    color: #505750;
     padding-top: 40px;
 }
 
 .post-link:hover {
-    text-decoration: none;
+    text-decoration: underline;
     color: #000000;
     padding-top: 40px;
 }
