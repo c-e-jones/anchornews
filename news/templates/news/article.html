@@ -4,19 +4,15 @@
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.genre }}</p>
-                <p class="post-byline">{{ post.byline }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+            <div class="col-12 achor-text">
+                <h1 class="article-title">{{ post.title }}</h1>
+                <p class="article-byline">{{ post.byline }}</p>
+                <p class="article-attributes">{{ post.author }} | {{ post.genre }}</p>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">
@@ -27,8 +23,8 @@
                 <p class="article-text">
                     {{ post.body | safe }}
                 </p>
-                <p class="post-date">{{ post.created_on }}</p>
-                <p class="update-date">{{ post.updated_on }}</p>
+                <p class="post-date">First posted: {{ post.created_on }}</p>
+                <p class="post-date">Last edited: {{ post.updated_on }}</p>
             </div>
         </div>
     </div>
