@@ -122,11 +122,11 @@
 }
 
 .page-link:hover {
-    background-color: #c0d7ff;
+    background-color: #3B403B;
     border-color: #1F71FF;
     border-style: dashed;
     border-radius: 20px;
-    color: #3B403B;
+    color: #c0d7ff;
 }
 
 /*** footer styling ***/
