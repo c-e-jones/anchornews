@@ -107,6 +107,7 @@
     color: #505750;
     padding-top: 40px;
     font-family: 'Noto Sans', sans-serif;
+    min-height: 200px;
 }
 
 .post-link:hover {
@@ -120,18 +121,21 @@
     font-family: 'Noto Sans', sans-serif;
     color: #505750;
     font-weight: 400;
+    min-height: 100px;
 }
 
 .item-text-genre {
     font-family: 'Noto Sans', sans-serif;
     color: #505750;
     font-weight: 400;
+    min-height: 100px;
 }
 
 .item-text-date {
     font-family: 'Noto Sans', sans-serif;
     color: #555755;
     font-weight: 200;
+    min-height: 100px;
 }
 
 /*** pagination button ***/
