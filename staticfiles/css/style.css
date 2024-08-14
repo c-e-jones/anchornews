@@ -15,12 +15,12 @@
 /*** text styling ***/
 
 .nav-text-title {
-    color: #121417;
+    color: #ffffff;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 900;
 }
 
-.nav-text-title-top {
+.nav-text-links-top {
     color: #ffffff;
     font-family: 'Noto Sanss', sans-serif;
     font-weight: 600;
