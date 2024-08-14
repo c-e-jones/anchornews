@@ -184,10 +184,8 @@
 
 .footer-bottom {
     min-width: 100%;
-    height: auto;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    margin-top: auto;
+    position: absolute;
 }
 
 /*** mt-3 override ***/
