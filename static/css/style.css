@@ -72,20 +72,30 @@
 .article-title {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 50px;
+    font-size: 50px;
 }
 
 .article-byline {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 44px;
 }
 
 .article-attributes {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.article-text {
+    color: #505750;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
+    font-size: 36px;
 }
 
 /*** Nav inner element positioning ***/
