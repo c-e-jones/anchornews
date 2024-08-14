@@ -120,7 +120,7 @@
     color: #c0d7ff;
 }
 
-.page-link {
+.page-link:hover {
     background-color: #c0d7ff;
     border-color: #1F71FF;
     border-radius: 20px;
