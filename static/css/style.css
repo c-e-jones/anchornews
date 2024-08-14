@@ -232,6 +232,12 @@
     margin-top: auto;
 }
 
+/*** account management styling ***/
+
+.account-padding-above {
+    padding-top: 300px;
+}
+
 /*** mt-3 override ***/
 
 .mt-3 {
