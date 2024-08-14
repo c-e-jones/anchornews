@@ -54,6 +54,12 @@
     text-decoration: underline;
 }
 
+.footer-text {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
 
 /*** Nav inner element positioning ***/
 
