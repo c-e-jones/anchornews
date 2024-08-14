@@ -11,7 +11,7 @@
   <div class="row account-padding-above">
     <div class="col-2 marginator-left-article"></div>
     <div class="col-8">
-      <h3>{% trans "Sign In" %}</h3>
+      <h3 id="login-style-big">{% trans "Sign In" %}</h3>
 
       <p>{% blocktrans %}Welcome back to the Birmingham Anchor. To leave a comment or like a post, please log in. If
         you
@@ -22,7 +22,7 @@
   <div class="row">
     <div class="col-2 marginator-left-article"></div>
     <div class="col-8">
-      <form class="login" method="POST" action="{% url 'account_login' %}">
+      <form id="login login-style" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
