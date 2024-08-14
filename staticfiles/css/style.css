@@ -111,6 +111,25 @@
     padding-top: 40px;
 }
 
+/*** pagination button ***/
+
+.page-link {
+    background-color: #c0d7ff;
+    border-color: #1F71FF;
+    border-style: dashed;
+    border-radius: 20px;
+    color: #3B403B;
+}
+
+.page-link {
+    background-color: #3B403B;
+    border-color: #1F71FF;
+    border-style: dashed;
+    border-radius: 20px;
+    color: #c0d7ff;
+    text-decoration: underline;
+}
+
 /*** footer styling ***/
 
 .footer-bottom {
