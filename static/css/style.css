@@ -10,6 +10,7 @@
 
 #bg-brum-red {
     background-color: #F7CBC9;
+    height: 100%;
 }
 
 /*** text styling ***/
@@ -70,8 +71,19 @@
     font-weight: 300px;
 }
 
+/*** footer styling ***/
+
+.footer-bottom {
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
 /*** mt-3 override ***/
 
 .mt-3 {
     margin-top: 25%;
 }
+
