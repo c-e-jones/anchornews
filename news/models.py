@@ -55,7 +55,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=PUBLISH_CONTROL, default=0)
 
     class Meta:
-        ordering = ["-created_on-"]
+        ordering = ('-status')
+        get_latest_by = 'status'
 
     def __str__(self):
         return f'{self.title} | written by {self.author}'
