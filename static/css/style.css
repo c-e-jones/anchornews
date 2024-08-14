@@ -1,3 +1,9 @@
-h1 {
-    color:red;
+/*** background style settings ***/
+
+#bg-brum-blue {
+    color: #003798;
+}
+
+#bg-brum-red {
+    color: #dc241f;
 }
