@@ -55,7 +55,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=PUBLISH_CONTROL, default=0)
 
     class Meta:
-        ordering = ('-status')
+        ordering = ['-status']
         get_latest_by = 'status'
 
     def __str__(self):
