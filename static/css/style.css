@@ -71,6 +71,18 @@
     font-weight: 300px;
 }
 
+.post-link {
+    text-decoration: none;
+    color: #3B403B;
+    padding-top: 40px;
+}
+
+.post-link:hover {
+    text-decoration: none;
+    color: #32292F;
+    padding-top: 40px;
+}
+
 /*** footer styling ***/
 
 .footer-bottom {
