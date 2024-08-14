@@ -20,7 +20,13 @@
     font-weight: 900;
 }
 
-.nav-text-links {
+.nav-text-title-top {
+    color: #ffffff;
+    font-family: 'Noto Sanss', sans-serif;
+    font-weight: 600;
+}
+
+.nav-text-links-bottom {
     color: #121417;
     font-family: 'Noto Sanss', sans-serif;
     font-weight: 600;
