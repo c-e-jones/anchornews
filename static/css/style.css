@@ -31,3 +31,32 @@
     font-family: 'Noto Sanss', sans-serif;
     font-weight: 600;
 }
+
+/*** Overrides for Bootstrap padding and margins which always break ***/
+
+/** Container override **/
+.container-override {
+    min-width: 100%;
+}
+
+.padding-margin-override {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.container {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
