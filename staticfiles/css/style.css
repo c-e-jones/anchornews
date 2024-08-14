@@ -108,11 +108,11 @@
 /*** Nav inner element positioning ***/
 
 .nav-text-padding-left {
-    padding-left:50px;
+    padding-left: 50px;
 }
 
 .nav-text-padding-right {
-    padding-right:50px;
+    padding-right: 50px;
 }
 
 /*** Item styling ***/
@@ -239,18 +239,30 @@
 }
 
 #login-style {
-        color: #505750;
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: 400;
-        font-size: 20px;
-    }
+    color: #505750;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
 
 #login-style-big {
-        color: #505750;
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: 600;
-        font-size: 40px;
-    }
+    color: #505750;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.marginator-top {
+    border-top: 1px solid;
+    border-color: #5348504f;
+    min-height: auto;
+}
+
+.marginator-bottom {
+    border-bottom: 1px solid;
+    border-color: #5348504f;
+    min-height: auto;
+}
 
 
 /*** mt-3 override ***/
@@ -258,4 +270,3 @@
 .mt-3 {
     margin-top: 25%;
 }
-
