@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
 from django.views import generic
-from .models import Post
-from .models import Comment
+from .models import Post, Comment
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
