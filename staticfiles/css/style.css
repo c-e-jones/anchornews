@@ -184,10 +184,12 @@
 
 .marginator-left {
     border-right: 1px solid;
+    border-color: #534850;
 }
 
 .marginator-right {
     border-left: 1px solid;
+    border-color: #534850;
 }
 
 /*** footer styling ***/
