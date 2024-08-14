@@ -1,9 +1,17 @@
 /*** background style settings ***/
 
 #bg-brum-blue {
-    background-color: #003798;
+    background-color: #99BEFF;
 }
 
 #bg-brum-red {
-    background-color: #dc241f;
+    background-color: #F7CBC9;
+}
+
+/*** text styling ***/
+
+.nav-text {
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
 }
