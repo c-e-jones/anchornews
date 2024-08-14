@@ -116,15 +116,17 @@
 .page-link {
     background-color: #c0d7ff;
     border-color: #1F71FF;
+    border-style: dashed;
     border-radius: 20px;
-    color: #c0d7ff;
+    color: #3B403B;
 }
 
 .page-link:hover {
     background-color: #c0d7ff;
     border-color: #1F71FF;
+    border-style: dashed;
     border-radius: 20px;
-    color: #74a7ff;
+    color: #3B403B;
 }
 
 /*** footer styling ***/
