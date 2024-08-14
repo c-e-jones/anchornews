@@ -180,6 +180,16 @@
     color: #c0d7ff;
 }
 
+/*** article styling ***/
+
+.marginator-left {
+    border-right: 1px solid;
+}
+
+.marginator-right {
+    border-left: 1px solid;
+}
+
 /*** footer styling ***/
 
 .footer-bottom {

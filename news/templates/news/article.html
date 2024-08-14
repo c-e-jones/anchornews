@@ -4,19 +4,23 @@
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-12 achor-text">
+            <div class="col-3 marginator-left"></div>
+            <div class="col-6 achor-text">
                 <h1 class="article-title">{{ post.title }}</h1>
                 <p class="article-byline">{{ post.byline }}</p>
                 <p class="article-attributes">{{ post.author }} | {{ post.genre }}</p>
             </div>
         </div>
+        <div class="col-3 marginator-right"></div>
     </div>
+</div>
 </div>
 
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-3 marginator-left"></div>
+        <div class="col-6">
             <div class="article-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -27,7 +31,9 @@
                 <p class="post-date">Last edited: {{ post.updated_on }}</p>
             </div>
         </div>
+        <div class="col-3 marginator-right"></div>
     </div>
+</div>
 </div>
 
 {% endblock content %}
