@@ -182,14 +182,26 @@
 
 /*** article styling ***/
 
-.marginator-left {
+.marginator-left-title {
     border-right: 1px solid;
-    border-color: #534850;
+    border-color: #5348504f;
 }
 
-.marginator-right {
+.marginator-right-title {
     border-left: 1px solid;
-    border-color: #534850;
+    border-color: #5348504f;
+}
+
+.marginator-left-article {
+    border-right: 1px solid;
+    border-color: #5348504f;
+    min-height: auto;
+}
+
+.marginator-right-article {
+    border-left: 1px solid;
+    border-color: #5348504f;
+    min-height: auto;
 }
 
 /*** footer styling ***/
