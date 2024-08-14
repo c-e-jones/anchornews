@@ -1,6 +1,10 @@
 /*** background style settings ***/
 
-#bg-brum-blue {
+#bg-brum-blue-1 {
+    background-color: #1F71FF;
+}
+
+#bg-brum-blue-2 {
     background-color: #c0d7ff;
 }
 
