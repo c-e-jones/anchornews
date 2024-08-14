@@ -291,3 +291,11 @@
 .mt-3 {
     margin-top: 25%;
 }
+
+/*** ul override for killing bootstrap code ***/
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
