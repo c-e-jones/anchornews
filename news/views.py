@@ -35,10 +35,8 @@ def article(request, slug):
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
-            comment.comment_title = title
             comment.author = request_user
             comment.post = post
-            comment.review = review
             comment.save()
 
     comment_form = CommentForm()
