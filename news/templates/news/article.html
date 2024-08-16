@@ -70,9 +70,9 @@
         <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-          <p>
-            {{ comment.title }}
-          </p>
+          <h3>
+            {{ comment_title.title }}
+          </h3>
           <p class="font-weight-bold">
             {{ comment.author }}
             <span class="font-weight-normal">
