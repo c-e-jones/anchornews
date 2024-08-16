@@ -38,6 +38,7 @@ def article(request, slug):
             comment.comment_title = comment_title
             comment.author = request.user
             comment.post = post
+            comment.review = comment.review
             comment.save()
 
     comment_form = CommentForm()
