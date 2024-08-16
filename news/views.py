@@ -32,7 +32,7 @@ def article(request, slug):
 
     return render(
         request,
-        "news/article.html", {"post": post},
+        "news/article.html",
         {
             'post': post,
             'comments': comments,
