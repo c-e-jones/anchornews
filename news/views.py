@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import TemplateView
 from django.views import generic
+from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
 from django.contrib.auth.decorators import login_required
@@ -51,3 +52,24 @@ def article(request, slug):
             "comment_form": comment_form,
         }
     )
+
+def comment_editor(request, slug, comment_id):
+    """
+    This is just a basic comment edit form.
+    """
+    if request.method == "POST":
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'You have successfully edited your comment.')
+        else:
+            message.add_message(request, messages.ERROR, 'Unfortunately, your comment could not be posted due to an error.')
+
+        return HttpResponseRedirect(reverse('post_detail', arges=[slug]))
