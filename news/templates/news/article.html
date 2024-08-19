@@ -3,101 +3,98 @@
 {% load crispy_forms_tags %}
 
 <div class="masthead">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 marginator-left-title"></div>
-            <div class="col-8 achor-text">
-                <h1 class="article-title">{{ post.title }}</h1>
-                <p class="article-byline">{{ post.byline }}</p>
-                <p class="article-attributes">{{ post.author }} | {{ post.genre }}</p>
-            </div>
-            <div class="col-2 marginator-right-title"></div>
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 marginator-left-title"></div>
+      <div class="col-8 achor-text">
+        <h1 class="article-title">{{ post.title }}</h1>
+        <p class="article-byline">{{ post.byline }}</p>
+        <p class="article-attributes">{{ post.author }} | {{ post.genre }}</p>
+      </div>
+      <div class="col-2 marginator-right-title"></div>
     </div>
+  </div>
 </div>
 </div>
 
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-2 marginator-left-article"></div>
-        <div class="col-8">
-            <div class="article-body article-text">
-                <p class="article-text">
-                    {{ post.body | safe }}
-                </p>
-                <p class="post-date">First posted: {{ post.created_on }}</p>
-                <p class="post-date">Last edited: {{ post.updated_on }}</p>
-            </div>
-        </div>
-        <div class="col-2 marginator-right-article"></div>
-          <!-- Displaying count of comments -->
   <div class="row">
-    <div class="col-12">
-      <strong class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
-      </strong>
-    </div>
-    <div class="col-12">
-      <hr>
-    </div>
-  </div>
-      <!-- Creating New Comments -->
-      <div class="col-md-4 card mb-4 mt-3">
-        <div class="card-body">
-          {% if user.is_authenticated %}
-          <h3>Leave a comment:</h3>
-          <p>Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post"
-            style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit"
-              class="btn btn-signup btn-lg">Submit</button>
-          </form>
-          {% else %}
-          <p>Log in to leave a comment</p>
-          {% endif %}
-        </div>
+    <div class="col-2 marginator-left-article"></div>
+    <div class="col-8">
+      <div class="article-body article-text">
+        <p class="article-text">
+          {{ post.body | safe }}
+        </p>
+        <p class="post-date">First posted: {{ post.created_on }}</p>
+        <p class="post-date">Last edited: {{ post.updated_on }}</p>
       </div>
-  <!-- Displaying Comments -->
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
-      <h3>Comments:</h3>
+    </div>
+    <div class="col-2 marginator-right-article"></div>
+    <!-- Displaying count of comments -->
+    <div class="row">
+      <div class="col-12">
+        <strong class="text-secondary">
+          <i class="far fa-comments"></i> {{ comment_count }}
+        </strong>
+      </div>
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <!-- Creating New Comments -->
+    <div class="col-md-4 card mb-4 mt-3">
       <div class="card-body">
-        <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
-        {% for comment in comments %}
-        <div class="p-2 comments
+        {% if user.is_authenticated %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
+      </div>
+    </div>
+    <!-- Displaying Comments -->
+    <div class="row">
+      <div class="col-md-8 card mb-4  mt-3 ">
+        <h3>Comments:</h3>
+        <div class="card-body">
+          <!-- Comment for loop -->
+          {% for comment in comments %}
+          <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-          <h3>
-            {{ comment.comment_title }}
-          </h3>
-          <p class="font-weight-bold">
-            {{ comment.author }}
-            <span class="font-weight-normal">
-              {{ comment.created_on }}
-            </span> wrote:
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.body | linebreaks }}
+            <h3>
+              {{ comment.comment_title }}
+            </h3>
+            <p class="font-weight-bold">
+              {{ comment.author }}
+              <span class="font-weight-normal">
+                {{ comment.created_on }}
+              </span> wrote:
+            </p>
+            <div id="comment{{ comment.id }}">
+              {{ comment.body | linebreaks }}
+            </div>
+            <div>
+              <p>This user reviews this article as: {{ comment.review }}</p>
+            </div>
+            {% if user.is_authenticated and comment.author == user %}
+            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+            {% endif %}
+            </p>
+            {% endif %}
           </div>
-          <div>
-            <p>This user reviews this article as: {{ comment.review }}</p>
-          </div>
-          {% if not comment.approved and comment.author == user %}
-          <p class="approval">
-            This comment is awaiting approval
-          </p>
-          {% endif %}
+          <!-- End comment for loop -->
+          {% endfor %}
         </div>
-        <!-- Our for loop ends here -->
-        {% endfor %}
       </div>
     </div>
   </div>
-    </div>
 </div>
 </div>
 
