@@ -72,4 +72,4 @@ def comment_editor(request, slug, comment_id):
         else:
             message.add_message(request, messages.ERROR, 'Unfortunately, your comment could not be posted due to an error.')
 
-        return HttpResponseRedirect(reverse('post_detail', arges=[slug]))
+        return HttpResponseRedirect(reverse('article', args=[slug]))
