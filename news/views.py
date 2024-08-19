@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import TemplateView
 from django.views import generic
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
@@ -73,4 +74,4 @@ def comment_editor(request, slug, comment_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error, could not update comment.')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('article', args=[slug]))
