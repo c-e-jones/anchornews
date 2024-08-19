@@ -55,9 +55,10 @@ def article(request, slug):
 
 def comment_editor(request, slug, comment_id):
     """
-    This is just a basic comment edit form.
+    This is a basic comment editor form view
     """
     if request.method == "POST":
+
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
@@ -68,8 +69,8 @@ def comment_editor(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'You have successfully edited your comment.')
+            messages.add_message(request, messages.SUCCESS, 'Comment updated successfully.')
         else:
-            message.add_message(request, messages.ERROR, 'Unfortunately, your comment could not be posted due to an error.')
+            messages.add_message(request, messages.ERROR, 'Error, could not update comment.')
 
-        return HttpResponseRedirect(reverse('article', args=[slug]))
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
