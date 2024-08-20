@@ -42,5 +42,5 @@ editButtons.addEventListener("mouseover", darkenBackground);
 deleteButtons.addEventListener("mouseover", darkenBackground);
 
 function darkenBackground(e) {
-  e.currentTarget.style.backgroundColor = "#7eadff"
+  e.currentTarget.style.backgroundColor = "#7eadff";
 }
