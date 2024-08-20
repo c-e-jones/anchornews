@@ -3,36 +3,36 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-
         <!-- Blog Entries Column -->
+        {% for post in post_list %}
         <div class="row">
-            {% for post in post_list %}
-            <div class="col-2 marginator-left-index"></div>
-            <div class="col-8 news-item">
-                <div class="card-body">
-                    <div class="item-container">
-                        <div class="image-flash">
-                            <p class="author">Author: {{ post.author }}</p>
+            <div class="col-2"></div>
+            <div class="col-10">
+                <div class="news-item">
+                    <div class="card-body">
+                        <div class="item-container">
+                            <div class="image-flash">
+                                <p class="author">Author: {{ post.author }}</p>
+                            </div>
                         </div>
+                        <a href="{% url 'article' post.slug %}" class="post-link">
+                            <h2 class="item-title post-link">{{ post.title }}</h2>
+                        </a>
+                        <hr />
+                        <p class="item-text-byline">{{ post.byline }}</p>
+                        <hr />
+                        <p class="item-text-genre text-muted">{{ post.genre }}</p>
+                        <hr />
+                        <p class="item-text-date text-muted">{{ post.created_on}}
+                        </p>
                     </div>
-                    <a href="{% url 'article' post.slug %}" class="post-link">
-                        <h2 class="item-title post-link">{{ post.title }}</h2>
-                    </a>
-                    <hr />
-                    <p class="item-text-byline">{{ post.byline }}</p>
-                    <hr />
-                    <p class="item-text-genre text-muted">{{ post.genre }}</p>
-                    <hr />
-                    <p class="item-text-date text-muted">{{ post.created_on}}
-                    </p>
                 </div>
             </div>
-            <div class="col-2 marginator-right-index"></div>
         </div>
-        {% if forloop.counter|divisibleby:1 %}
     </div>
+    {% if forloop.counter|divisibleby:1 %}
     <div class="row">
         {% endif %}
         {% endfor %}

@@ -29,15 +29,14 @@
         <p class="post-date">First posted: {{ post.created_on }}</p>
         <p class="post-date">Last edited: {{ post.updated_on }}</p>
       </div>
-    </div>
-    <div class="col-1 marginator-right-article"></div>
-    <!-- Displaying count of comments -->
-    <div class="row">
       <div class="col-12">
         <strong class="text-secondary">
           <i class="far fa-comments"></i> {{ comment_count }}
         </strong>
       </div>
+    </div>
+    <div class="col-1 marginator-right-article"></div>
+    <div class="row">
       <div class="col-12">
         <hr>
       </div>
@@ -98,23 +97,24 @@
 </div>
 
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Are you sure you want to delete your comment?
+        You are deleting this comment. 
+        <br>
+        <br>
+        Are you sure this is what you want to do?
+        <br>
+        <br>
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
       </div>
