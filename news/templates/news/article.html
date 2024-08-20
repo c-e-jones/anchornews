@@ -85,11 +85,11 @@
             </div>
 
             <div>
-              <p class="post-date">Comment edited: {{ comment.edited_on }}</p>
+              <p class="post-date">Comment last modified: {{ comment.edited_on }}</p>
             </div>
             {% if user.is_authenticated and comment.author == user %}
-            <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-            <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+            <button class="btn btn-delete comment-button " comment_id="{{ comment.id }}">Delete</button>
+            <button class="btn btn-edit comment-button" comment_id="{{ comment.id }}">Edit</button>
             {% endif %}
           </div>
           <!-- End comment for loop -->
