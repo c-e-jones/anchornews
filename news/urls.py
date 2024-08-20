@@ -6,4 +6,5 @@ urlpatterns = [
     views.PostList.as_view(), name='home'),
     path('<slug:slug>/', views.article, name='article'),
     path('<slug:slug>/edit_comment/<int:comment_id>', views.comment_editor, name='comment_editor'),
+    path('<slug:slug>/delete_comment/<int:comment_id>', views.comment_delete, name='comment_delete'),
 ]
