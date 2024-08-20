@@ -1,5 +1,5 @@
 # Birmingham Anchor: A Local News Site Focused on the Birmingham Area
-## A hackathon project by team Event Horizon
+## A capstone project by Carl Jones
 
 ### Table of Contents
 1. [Project Description](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#1-project-description)
