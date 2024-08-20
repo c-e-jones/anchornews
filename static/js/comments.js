@@ -11,14 +11,6 @@ const deleteConfirm = document.getElementById("deleteConfirm");
  * This is effectively DRY code for the comment edit buttons, from the Codestar
  * blog. Attribution to the tutorial, however, there is original JS elsewhere.
  * 
- * Initializes edit functionality for the provided edit buttons.
- * 
- * For each button in the `editButtons` collection:
- * - Retrieves the associated comment's ID upon click.
- * - Fetches the content of the corresponding comment.
- * - Populates the `commentText` input/textarea with the comment's content for editing.
- * - Updates the submit button's text to "Update".
- * - Sets the form's action attribute to the `edit_comment/{commentId}` endpoint.
  */
 
 for (let button of editButtons) {
@@ -31,15 +23,8 @@ for (let button of editButtons) {
     });
   }
 
-  /**
-* Initializes deletion functionality for the provided delete buttons.
-* 
-* For each button in the `deleteButtons` collection:
-* - Retrieves the associated comment's ID upon click.
-* - Updates the `deleteConfirm` link's href to point to the 
-* deletion endpoint for the specific comment.
-* - Displays a confirmation modal (`deleteModal`) to prompt 
-* the user for confirmation before deletion.
+/**
+* This shows a delete modal. The modal will ask and confirm if the user wants to delete.
 */
 for (let button of deleteButtons) {
   button.addEventListener("click", (e) => {
@@ -48,3 +33,10 @@ for (let button of deleteButtons) {
     deleteModal.show();
   });
 }
+
+/**
+ * Some simple event listeners to make some things more frilly
+ */
+
+editButtons.addEventListener("mouseover");
+deleteButtons.addEventListener("mouseover")
