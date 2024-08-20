@@ -74,35 +74,35 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
     margin-top: 44px;
-    font-size: 2vw;
+    font-size: 4vw;
 }
 
 .article-byline {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 3.5vw;
 }
 
 .article-attributes {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 .article-text {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 2.5vw;
 }
 
 .post-date {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 /*** Nav inner element positioning ***/
