@@ -9,7 +9,7 @@
 }
 
 #bg-brum-red {
-    background-color: #fff0ee;
+    background-color: #fff7f6;
     min-height: 150vh;
 }
 
@@ -353,7 +353,7 @@
     margin-top: 25%;
 }
 
-.m-3 {
+#m-3 {
     margin: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
