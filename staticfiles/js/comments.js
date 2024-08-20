@@ -38,5 +38,9 @@ for (let button of deleteButtons) {
  * Some simple event listeners to make some things more frilly
  */
 
-editButtons.addEventListener("mouseover");
-deleteButtons.addEventListener("mouseover")
+editButtons.addEventListener("mouseover", darkenBackground);
+deleteButtons.addEventListener("mouseover", darkenBackground);
+
+function darkenBackground(e) {
+  e.currentTarget.style.backgroundColor = "#7eadff"
+}
