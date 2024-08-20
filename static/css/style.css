@@ -151,11 +151,11 @@
 /*** Nav inner element positioning ***/
 
 .nav-text-padding-left {
-    padding-left: 50px;
+    padding-left: 25px;
 }
 
 .nav-text-padding-right {
-    padding-right: 50px;
+    padding-right: 25px;
 }
 
 #nav-link {
