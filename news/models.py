@@ -70,6 +70,8 @@ class Comment(models.Model):
     review = models.CharField(max_length=2, choices=REVIEW_CHOICES, help_text="What do you rate this article out of 10, where 10 is the best?")
     approved = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
+    edited = models.CharField(max_length=8, choices=(('0', 'Unedited'), (1, 'Edited')), default=0)
+    edited_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["created_on"]

@@ -96,7 +96,33 @@
   </div>
 </div>
 
-<!-- Delete confirmation modal -->
+<!-- Edit modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Edit comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        You are editing this comment.
+        <br>
+        <br>
+        Are you sure this is what you want to do?
+        <br>
+        <br>
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="editConfirm" href="#" class="btn
+          btn-danger">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
