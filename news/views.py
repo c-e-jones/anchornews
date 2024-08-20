@@ -54,6 +54,11 @@ def article(request, slug):
         }
     )
 
+
+""" 
+Code for comment edit box
+"""
+
 def comment_editor(request, slug, comment_id):
     """
     This is a basic comment editor form view
@@ -76,6 +81,12 @@ def comment_editor(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('article', args=[slug]))
 
+
+""" 
+Code for comment delete
+"""
+
+
 def comment_delete(request, slug, comment_id):
     """
     view to delete comment
@@ -90,4 +101,4 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('article', args=[slug]))
