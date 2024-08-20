@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import TemplateView
+from django.views.generic.list import ListView
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -13,12 +14,6 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "news/index.html"
     paginate_by = 5
-
-class LocalGovList(generic.ListView):
-    queryset = Post.objects.filter(genre=0)
-    template_name = "news/local_government.html"
-    paginate_by = 5
-
 
 
 def article(request, slug):
