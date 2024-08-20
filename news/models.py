@@ -15,11 +15,12 @@ REVIEW_CHOICES = [
     ('7', '7'),
     ('8', '8'),
     ('9', '9'),
-    ('10', '10'), 
+    ('10', '10'),
 ]
 
+
 class Post(models.Model):
-        # This is the data model for posts
+    # This is the data model for posts
     title = models.CharField(
         max_length=150, unique=True,
         help_text='What is the title of this article?'
@@ -49,8 +50,9 @@ class Post(models.Model):
         ], help_text="What genre of news is this article?", default="0")
     byline = models.CharField(max_length=150, help_text="What is your byline?")
     body = models.TextField()
-    created_on = models.DateTimeField(help_text="When will this be posted?")
-    updated_on = models.DateTimeField(auto_now=True, help_text="When was this updated?")
+    created_on = models.DateTimeField(help_text="When was this posted?")
+    updated_on = models.DateTimeField(
+        auto_now=True, help_text="When was this updated?")
     objects = models.Manager()
     status = models.IntegerField(choices=PUBLISH_CONTROL, default=0)
 
@@ -63,14 +65,21 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
-    comment_title = models.CharField(max_length=150, help_text="What is the main theme of your comment?")
-    body = models.TextField(max_length=600, help_text="What do you want to say in your comment?")
-    review = models.CharField(max_length=2, choices=REVIEW_CHOICES, help_text="What do you rate this article out of 10, where 10 is the best?")
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='commenter')
+    comment_title = models.CharField(
+        max_length=150, help_text="What is the main theme of your comment?")
+    body = models.TextField(
+        max_length=600, help_text="What do you want to say in your comment?")
+    review = models.CharField(
+        max_length=2, choices=REVIEW_CHOICES,
+        help_text="How do you rate this article, where 10 is the best?")
     approved = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    edited = models.CharField(max_length=8, choices=(('0', 'Unedited'), (1, 'Edited')), default=0)
+    edited = models.CharField(max_length=8, choices=(
+        ('0', 'Unedited'), (1, 'Edited')), default=0)
     edited_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
