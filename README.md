@@ -31,6 +31,13 @@ The target audience of the site is users within the Birmingham area, seeking new
 The goal of this website is quite simplistic. It is to provide an easily read and understood centralized location for local reporting and discussion to be held about local events in the West Midlands region, but primarily Birmingham. Future feature concepts are the ability to actually sort articles by their genre category, to provide an average review score, and to enable users of the website to provide their own news articles to the site, transforming it from a news outlet into a news forum-blog structure. 
 
 
+### User Stories
+
+**Example 1**
+
+As a user, I would like to 
+
+
 ## AGILE Methodology
 
 The development of this project used Agile tools in it's development, seeking to streamline the development process. Some of the key elements of this were **a kanban board and wireframing tools.**
@@ -63,17 +70,31 @@ To conduct my basic wireframing, I used Balsamiq. Due to the simplicity of the w
 
 ### Coding the Site
 
+Before coding began, I needed to have a clear model in mind which relates entities to each other, and is customised to meet the task of my design. To achieve this, I used Lucidchart, and established a simple yet clear Entity Relationship Diagram. 
 
+![ERD](https://github.com/user-attachments/assets/aca93875-2e2e-49e4-a386-f17ba797d962)
 
-### Visual Example of Navbar
+As shown above, this ERD connects the user as a Primary Key to the author categories in both the post and the comment models. This allows the application to track which user is the creator of what record.
 
-### Code
+The comment fields are themselves connected to the Title field as a foreign key, ensuring that comments are kept relevant to their specific post.
 
+To provide some sort of feedback on whether content has been edited, I provided an edited status for both primary models, which is shown to the user as visual feedback beneath a post. This enables users to see visually whether anything has been altered after the fact.
 
+### Code for the Models
 
-### Mobile
+****Post Model****
 
+![image](https://github.com/user-attachments/assets/ba332bd8-6c5f-4c12-aaea-1401fcb11b0c)
 
+In practice, this is what the Post model translates into. It has included help_text, to provide some basic user feedback and instruction of what they are supposed to be doing in a given field. Although this help model does not display anywhere on the frontend of the website yet, when user news contributions are made functional, this will automatically provide the user with these instructions as part of Summernote when that view and form is constructed. This prevents me having to migrate and potentially causing database issues down the line.
+
+****Comment Model****
+
+![image](https://github.com/user-attachments/assets/a24a90d5-c923-4861-a6e6-f470a323a5b7)
+
+Likewise, the comment model also provides the same helptext. To organise the review choices slightly better, I produced these outside of the class, incase I decide to use them in a more complex way at a later date with a review aggregator class.
+
+![image](https://github.com/user-attachments/assets/fbf33d96-e836-4d38-9fb8-0b5ee29b0590)
 
 
 ### Desktop
