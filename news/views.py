@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "news/index.html"
@@ -17,16 +18,12 @@ class PostList(generic.ListView):
 
 
 def article(request, slug):
-    """ 
+    """
     display an article
-    
     context:
-    
     ``article``
         an instance of :model:`blog.Post`
-
     template:
-
     :template:`blog/article.html`
     """
 
@@ -57,9 +54,10 @@ def article(request, slug):
     )
 
 
-""" 
+"""
 Code for comment edit box
 """
+
 
 def comment_editor(request, slug, comment_id):
     """
@@ -77,14 +75,16 @@ def comment_editor(request, slug, comment_id):
             comment.post = post
             comment.approved = True
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment updated successfully.')
+            messages.add_message(
+                request, messages.SUCCESS, 'Comment updated successfully.')
         else:
-            messages.add_message(request, messages.ERROR, 'Error, could not update comment.')
+            messages.add_message(
+                request, messages.ERROR, 'Error, could not update comment.')
 
     return HttpResponseRedirect(reverse('article', args=[slug]))
 
 
-""" 
+"""
 Code for comment delete
 """
 
@@ -99,8 +99,11 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(
+            request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('article', args=[slug]))
+    
