@@ -10,9 +10,16 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "news/index.html"
     paginate_by = 5
+
+class LocalGovList(generic.ListView):
+    queryset = Post.objects.filter(genre=0)
+    template_name = "news/local_government.html"
+    paginate_by = 5
+
+
 
 def article(request, slug):
     """ 
