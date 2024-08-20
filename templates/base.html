@@ -41,9 +41,9 @@
             <div class="col-1">
                 <span class="navbar-text">
                     {% if user.is_authenticated %}
-                    <p class="text-end m-3 nav-text-links-top sign-in-details">User: {{ user }}</p>
+                    <p class="nav-text-links-top sign-in-details" id="m-3">User: {{ user }}</p>
                     {% else %}
-                    <p class="text-end m-3 nav-text-links-top sign-in-details">Logged Out</p>
+                    <p class="nav-text-links-top sign-in-details" id="m-3">Logged Out</p>
                     {% endif %}
                 </span>
             </div>
