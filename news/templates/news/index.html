@@ -20,11 +20,11 @@
                         <a href="{% url 'article' post.slug %}" class="post-link">
                             <h2 class="item-title post-link">{{ post.title }}</h2>
                         </a>
-                        <hr />
+                        <hr/>
                         <p class="item-text-byline">{{ post.byline }}</p>
-                        <hr />
+                        <hr/>
                         <p class="item-text-genre text-muted">{{ post.genre }}</p>
-                        <hr />
+                        <hr/>
                         <p class="item-text-date text-muted">{{ post.created_on}}
                         </p>
                     </div>
@@ -50,7 +50,6 @@
     </ul>
 </nav>
 {% endif %}
-</div>
 
 <!-- index.html content ends here -->
 {% endblock %}
