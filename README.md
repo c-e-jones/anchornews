@@ -1,21 +1,7 @@
 # Birmingham Anchor: A Local News Site Focused on the Birmingham Area
 ## A capstone project by Carl Jones
 
-### Table of Contents
-1. [Project Description](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#1-project-description)
-2. [Hackathon Project Rules and Guidelines](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#2-hackathon-project-rules-and-guidelines)
-3. [Background Research](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#3-background-research)
-4. [Design Process](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#4-design-process)
-5. [How to Use Celebrating Diversity](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#5-how-to-use-celebrating-diversity)
-6. [Testing Documentation](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#6-testing-documentation)
-7. [Credits](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#7-credits)
-8. [Licencing Rights](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#8-licencing-rights)
-9. [Other Documents](https://github.com/maria-grozova/Celebrating-Diversity/blob/main/README.md#9-ohter-documents)
-
-
-
-
-##  1. Project Description
+##  Project Description
 
 ### Base Concept
 
@@ -32,7 +18,7 @@ The name selected for this project was decided as the Birmingham Anchor.
 4. Responsivity - this site is designed with a mobile-first orientation, optimised primarily around being usable fully on any handheld device.
 
 
-##  3. UX
+##  UX
 
 The UX is intended to be as simple as feasibly possible, presenting the user with a simple news site design. 
 
@@ -44,14 +30,35 @@ The target audience of the site is users within the Birmingham area, seeking new
 
 The goal of this website is quite simplistic. It is to provide an easily read and understood centralized location for local reporting and discussion to be held about local events in the West Midlands region, but primarily Birmingham. Future feature concepts are the ability to actually sort articles by their genre category, to provide an average review score, and to enable users of the website to provide their own news articles to the site, transforming it from a news outlet into a news forum-blog structure. 
 
-##  4. Design Process
 
+## AGILE Methodology
 
+The development of this project used Agile tools in it's development, seeking to streamline the development process. Some of the key elements of this were **a kanban board and wireframing tools.**
+
+### Kanban Board
+
+To manage the workload of the task, I used the built in projects tools that GitHub provides, under the kanban tile view. For this, I added tasks as necessary, and moved them into appropriate categories as needed.
+![image](https://github.com/user-attachments/assets/616565bd-5b1d-4c7a-9075-28e1c099567c)
 
 ### Wireframing
 
+To conduct my basic wireframing, I used Balsamiq. Due to the simplicity of the website design, I only produced high quality wireframes.
 
-### High Fidelity Wireframes
+****Index view / homepage****
+
+![Wireframe 1](https://github.com/user-attachments/assets/13ea4e7f-72fa-429d-8dd6-e429e73d6ce5)
+
+****Article view****
+
+![Wireframe 2](https://github.com/user-attachments/assets/d4cecf28-979b-445a-b288-46854c3451ba)
+
+****Comment fields****
+
+![Wireframe 3](https://github.com/user-attachments/assets/a5924c77-68e6-4c37-8755-759b7bb5085c)
+
+****Account management pages****
+
+![Wireframe 4](https://github.com/user-attachments/assets/7eab2863-c5ed-49de-af01-a6f13e38b713)
 
 
 ### Coding the Site
@@ -93,7 +100,7 @@ The goal of this website is quite simplistic. It is to provide an easily read an
 
 
 
-##  5. How to Use Birmingham Anchor
+## How to Use Birmingham Anchor
 
 
 
@@ -106,7 +113,7 @@ The goal of this website is quite simplistic. It is to provide an easily read an
 
 
 
-##  6. Testing Documentation
+##  Testing Documentation
 
 All links function as detail lists above.
 
@@ -120,7 +127,7 @@ All links function as detail lists above.
 
 
   
-##  8. Licencing Rights and Attributions
+## Licencing Rights and Attributions
 
 For the construction of this website, we have used a number of assets which are not made by ourselves. They are, however, covered by Open Source licencing, and are fair use under a Creative Commons licence.
 
