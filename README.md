@@ -1,112 +1,142 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Birmingham Anchor: A Local News Site Focused on the Birmingham Area
+## A capstone project by Carl Jones
 
-Welcome Carl Jones,
+##  Project Description
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Base Concept
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+The base concept of this project was a simple full-stack development project, for which I designed the scope to be a simple news website focused on the local Birmingham area.
 
-## Gitpod Reminders
+The name selected for this project was decided as the Birmingham Anchor. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+### Key Features
 
-A blue button should appear to click: _Make Public_,
+1. To provide a user authentication system, which allows users to log into the website and add records to the site.
+2. CRUD functionality, which allows users to create, read, update and delete records added to the site. In the context of this website, it was simply a comment field, that allows users to discuss the news below the article in question, as well as edit or delete those comments / modify their review of the article.
+3. Clearly understood structure, with clear content. This was achieved in this website by ensuring that content is neatly organised, in reverse chronological order, with tags for what genre of news the article fits into. This should provide an easily understood and navigable site design.
+4. Responsivity - this site is designed with a mobile-first orientation, optimised primarily around being usable fully on any handheld device.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+##  UX
 
-A blue button should appear to click: _Make Public_,
+The UX is intended to be as simple as feasibly possible, presenting the user with a simple news site design. 
 
-Another blue button should appear to click: _Open Browser_.
+### Users
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The target audience of the site is users within the Birmingham area, seeking news and views about local issues and events. Due to this, most of the content on the website is tagged with locality in mind, with features looking to local government news, local events, wider regional events in the West Midlands area, and generally localised news. As most news sites can exist really without a national news section, there is also one of those. With this in mind, the target user for Birmingham Anchor is to provide an anchoring point to individuals in the West Midlands region who want local news and reporting, providing them a platform and ecosystem in which they can access and discuss news.
 
-To log into the Heroku toolbelt CLI:
+### Goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The goal of this website is quite simplistic. It is to provide an easily read and understood centralized location for local reporting and discussion to be held about local events in the West Midlands region, but primarily Birmingham. Future feature concepts are the ability to actually sort articles by their genre category, to provide an average review score, and to enable users of the website to provide their own news articles to the site, transforming it from a news outlet into a news forum-blog structure. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
 
-------
+### User Stories
 
-## Release History
+**Example 1**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+> As a user, I would like to be able to view recent local news and to provide comment and view on the quality of it. If I make a mistake, I would like to be able to edit and correct it after the fact.
+>
+>     Users should be presented with a list view of the local news, which is sorted in reverse chronological order.
+>     Users should be provided with the opportunity to add comments onto a new article, as well as a review.
+>     If the user makes an error, they can edit it or even delete the comment. Feedback is provided to the user if they accidentally select delete, and a record is created of the edit being made and displayed to all users so they can keep track of edits.
+>     
 
-**April 26 2024:** Update node version to 16
+**Example 2**
 
-**September 20 2023:** Update Python version to 3.9.17.
+> As a user, I do not like to read news which does not appeal to my interests. I would like to be able to sort and view news based on what type it is, so I can avoid reading news which isn't relevant to me.
+>
+>     A genre categorisation system should developed and deployed, which tells users which genre of news the article will discuss before they click onto it.
+>     Future functionality will enable users to be able to sort the news by these genres, allowing them to more specifically get a list of personally preferred news and insights.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Example 3**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+> As a mobile phone user who does not own a desktop, I would like for the website to be usable on handheld devices.
+>
+>     The website should be openable and easily viewable in a responsive manner on mobile devices.
+>     All UI elements must scale appropriately with these handheld restrictions, ensuring users are able to engage with the site appropriately and without suffering a negative user experience.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## AGILE Methodology
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The development of this project used Agile tools in it's development, seeking to streamline the development process. Some of the key elements of this were **a kanban board and wireframing tools.**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Kanban Board
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+To manage the workload of the task, I used the built in projects tools that GitHub provides, under the kanban tile view. For this, I added tasks as necessary, and moved them into appropriate categories as needed.
+![image](https://github.com/user-attachments/assets/616565bd-5b1d-4c7a-9075-28e1c099567c)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Wireframing
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+To conduct my basic wireframing, I used Balsamiq. Due to the simplicity of the website design, I only produced high quality wireframes.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+****Index view / homepage****
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Wireframe 1](https://github.com/user-attachments/assets/13ea4e7f-72fa-429d-8dd6-e429e73d6ce5)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+****Article view****
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Wireframe 2](https://github.com/user-attachments/assets/d4cecf28-979b-445a-b288-46854c3451ba)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+****Comment fields****
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Wireframe 3](https://github.com/user-attachments/assets/a5924c77-68e6-4c37-8755-759b7bb5085c)
 
-------
+****Account management pages****
 
-## FAQ about the uptime script
+![Wireframe 4](https://github.com/user-attachments/assets/7eab2863-c5ed-49de-af01-a6f13e38b713)
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Coding the Site
 
-**How will this affect me?**
+Before coding began, I needed to have a clear model in mind which relates entities to each other, and is customised to meet the task of my design. To achieve this, I used Lucidchart, and established a simple yet clear Entity Relationship Diagram. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![ERD](https://github.com/user-attachments/assets/aca93875-2e2e-49e4-a386-f17ba797d962)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+As shown above, this ERD connects the user as a Primary Key to the author categories in both the post and the comment models. This allows the application to track which user is the creator of what record.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The comment fields are themselves connected to the Title field as a foreign key, ensuring that comments are kept relevant to their specific post.
 
-**So….?**
+To provide some sort of feedback on whether content has been edited, I provided an edited status for both primary models, which is shown to the user as visual feedback beneath a post. This enables users to see visually whether anything has been altered after the fact.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Code for the Models
 
-**Can I opt out?**
+****Post Model****
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![image](https://github.com/user-attachments/assets/ba332bd8-6c5f-4c12-aaea-1401fcb11b0c)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+In practice, this is what the Post model translates into. It has included help_text, to provide some basic user feedback and instruction of what they are supposed to be doing in a given field. Although this help model does not display anywhere on the frontend of the website yet, when user news contributions are made functional, this will automatically provide the user with these instructions as part of Summernote when that view and form is constructed. This prevents me having to migrate and potentially causing database issues down the line.
 
-**Anything more?**
+****Comment Model****
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![image](https://github.com/user-attachments/assets/a24a90d5-c923-4861-a6e6-f470a323a5b7)
 
----
+Likewise, the comment model also provides the same helptext. To organise the review choices slightly better, I produced these outside of the class, incase I decide to use them in a more complex way at a later date with a review aggregator class.
 
-Happy coding!
+![image](https://github.com/user-attachments/assets/fbf33d96-e836-4d38-9fb8-0b5ee29b0590)
+
+
+##  Testing Documentation
+
+All links function as detail lists above.
+
+### Homepage
+
+
+### CSS
+
+
+### Python Code
+
+
+  
+## Licencing Rights and Attributions
+
+For the construction of this website, we have used a number of assets which are not made by ourselves. They are, however, covered by Open Source licencing, and are fair use under a Creative Commons licence.
+
+Tools used:
+- [Bootstrap](https://getbootstrap.com) (CC BY 3.0)
+- [Font Awesome](https://fontawesome.com/v4/icons/) (CC BY 3.0)
+- [Google Fonts](https://fonts.google.com) (SIL Open Font Licence)
+- [Pexels](https://www.pexels.com) (CC0)
+
+## 9. Other Documents
