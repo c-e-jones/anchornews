@@ -35,8 +35,26 @@ The goal of this website is quite simplistic. It is to provide an easily read an
 
 **Example 1**
 
-As a user, I would like to 
+> As a user, I would like to be able to view recent local news and to provide comment and view on the quality of it. If I make a mistake, I would like to be able to edit and correct it after the fact.
+>
+>     Users should be presented with a list view of the local news, which is sorted in reverse chronological order.
+>     Users should be provided with the opportunity to add comments onto a new article, as well as a review.
+>     If the user makes an error, they can edit it or even delete the comment. Feedback is provided to the user if they accidentally select delete, and a record is created of the edit being made and displayed to all users so they can keep track of edits.
+>     
 
+**Example 2**
+
+> As a user, I do not like to read news which does not appeal to my interests. I would like to be able to sort and view news based on what type it is, so I can avoid reading news which isn't relevant to me.
+>
+>     A genre categorisation system should developed and deployed, which tells users which genre of news the article will discuss before they click onto it.
+>     Future functionality will enable users to be able to sort the news by these genres, allowing them to more specifically get a list of personally preferred news and insights.
+
+**Example 3**
+
+> As a mobile phone user who does not own a desktop, I would like for the website to be usable on handheld devices.
+>
+>     The website should be openable and easily viewable in a responsive manner on mobile devices.
+>     All UI elements must scale appropriately with these handheld restrictions, ensuring users are able to engage with the site appropriately and without suffering a negative user experience.
 
 ## AGILE Methodology
 
@@ -95,43 +113,6 @@ In practice, this is what the Post model translates into. It has included help_t
 Likewise, the comment model also provides the same helptext. To organise the review choices slightly better, I produced these outside of the class, incase I decide to use them in a more complex way at a later date with a review aggregator class.
 
 ![image](https://github.com/user-attachments/assets/fbf33d96-e836-4d38-9fb8-0b5ee29b0590)
-
-
-### Desktop
-
-
-###Example of Styling Change to Navbar CSS
-
-
-
-### Visual Example of Footer
-
-### Code
-
-
-
-
-### Mobile
-
-
-
-
-### Desktop
-
-
-
-
-## How to Use Birmingham Anchor
-
-
-
-### Navbar
-
-![image](https://github.com/maria-grozova/Celebrating-Diversity/assets/139562112/55722ba6-2926-4a33-9e5b-b2ced7277d23)
-
-
-
-
 
 
 ##  Testing Documentation
