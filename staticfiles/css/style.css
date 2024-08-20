@@ -74,28 +74,65 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
     margin-top: 44px;
-    font-size: 5vw;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .article-title {
+        color: #505750;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 700;
+        margin-top: 44px;
+        font-size: 5vw;
+    }
 }
 
 .article-byline {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
-    font-size: 4.5vw;
+    font-size: 34px;
+}
+
+@media only screen and (max-width: 768px) {
+    .article-byline {
+        color: #505750;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 500;
+        font-size: 4.5vw;
+    }
 }
 
 .article-attributes {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    font-size: 3vw;
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 768px) {
+    .article-attributes {
+        color: #505750;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        font-size: 3vw;
+    }
 }
 
 .article-text {
     color: #505750;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
-    font-size: 3.5vw;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+    .article-text {
+        color: #505750;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 300;
+        font-size: 3.5vw;
+    }
 }
 
 .post-date {
@@ -312,7 +349,9 @@
 
 /*** ul override for killing bootstrap code ***/
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 20px;
