@@ -86,6 +86,32 @@ To conduct my basic wireframing, I used Balsamiq. Due to the simplicity of the w
 ![Wireframe 4](https://github.com/user-attachments/assets/7eab2863-c5ed-49de-af01-a6f13e38b713)
 
 
+### Colour Design
+
+Colouring is an important element of any website, and should guide the user appropriately through their journey.
+
+In the design of this website, five colours have been used. To help select colours, I have used Coolors, which is an online colour picking tool.
+
+Initially, the design prospect was to brand this with a much closer visual identity to Birmingham. To achieve this, I intended to use the Birmingham flag colourway.
+
+![image](https://github.com/user-attachments/assets/a369b545-e0f2-4c49-90db-484852978605)
+
+However, as is often the case, colour patterns which work together well on a flag which exclusively uses symbology do not work quite as well together on a website with lots of text. In particular, every colour was too bright and too much of a primary colour, when what was necessary was to use softer hues which do not clash so heavily, and which provide effective contrast for text.
+
+**Revised Colours**
+
+![image](https://github.com/user-attachments/assets/ca0a6172-782f-4b2f-8e2b-199e96b025f3)
+
+This new colour palette drops the yellow, as it did not work with any of the other colours selected, and the red was massively shifted down into being a warm white hue. Although much of the closer association to Birmingham colouring has been lost, this has made the website much less aggressive and garish.
+
+The intent of future design is to refine the colouring down even further, and drill down to a closer 60-30-10 colour ruling. 
+
+**Colours in practice**
+
+![image](https://github.com/user-attachments/assets/0229b47a-db73-4919-ac7b-f8b9992e4791)
+
+As shown above, the colours look like this on the site itself. The white is used as a contrast text colour to the blue colourway, while the grey-ebony colour is used as the contrast to the red. I opted for the grey over a pure black to soften the image of the site, and make it slightly less aggressive. The lighter shade of blue is only used on buttons. 
+
 ### Coding the Site
 
 Before coding began, I needed to have a clear model in mind which relates entities to each other, and is customised to meet the task of my design. To achieve this, I used Lucidchart, and established a simple yet clear Entity Relationship Diagram. 
@@ -117,26 +143,165 @@ Likewise, the comment model also provides the same helptext. To organise the rev
 
 ##  Testing Documentation
 
-All links function as detail lists above.
+### Python Linter Testing
 
-### Homepage
+Many error instances of a line being too long are the result of Django base defaults. Any errors not a result of Django will be commented on directly.
 
+**Settings**
+![image](https://github.com/user-attachments/assets/78d45eb7-b7e2-4e60-844e-b8f66719c7f0)
 
-### CSS
+These are primarily from urls and such, which do not impact functionality.
 
+**urls.py (project)**
 
-### Python Code
+![image](https://github.com/user-attachments/assets/637e8606-9d4f-4619-bd1d-dce4698315ac)
 
+**admin.py (app)**
 
-  
-## Licencing Rights and Attributions
+![image](https://github.com/user-attachments/assets/daf5d800-4f70-4994-b84c-93e71ad2aa2a)
 
-For the construction of this website, we have used a number of assets which are not made by ourselves. They are, however, covered by Open Source licencing, and are fair use under a Creative Commons licence.
+**forms.py (app)**
+
+![image](https://github.com/user-attachments/assets/6564a96b-bd2f-4b28-942c-2d4714682a5c)
+
+**models.py (app)**
+
+![image](https://github.com/user-attachments/assets/0bdf4028-7d48-4689-a986-5f1923b03402)
+
+As seen above, a number of errors were found on this file. However, all are rudimentary fixes due to a lack of new lines and lines which are too long.
+
+![image](https://github.com/user-attachments/assets/4afff22e-7793-40de-aa94-c7170486728d)
+
+**urls.py (app)**
+
+![image](https://github.com/user-attachments/assets/c55c207a-764e-4a01-8093-26a7995f7862)
+
+The same can be seen above. 
+
+![image](https://github.com/user-attachments/assets/c376284a-dac6-4026-8dd9-dfd2eae254b2)
+
+**views.py (app)**
+
+![image](https://github.com/user-attachments/assets/aec4ea2f-23f5-4075-a41d-af4addbc5398)
+
+Once more, a repetition of the same errors. Future code behaviour will need to reflect on the repetition of these errors.
+
+![image](https://github.com/user-attachments/assets/4f0c0789-0df0-4c89-a9ce-0b6f4d5af388)
+
+### HTML Validation
+
+For the HTML validation, the W3 validator routinely flagged Django Markdown as errors. These have been hidden and any hidden errors are due to this, as 'fixing' them would break the website by causing data to not load.
+
+**article.html**
+
+![image](https://github.com/user-attachments/assets/89dec251-d3ab-4d22-ae7d-1cd3f10fbb46)
+
+A stray div. 
+
+![image](https://github.com/user-attachments/assets/f327807c-4ed2-4ca9-9764-9f420219ba7b)
+
+**index.html**
+
+![image](https://github.com/user-attachments/assets/c80301c6-42eb-4248-9169-36eb05df8202)
+
+Another stray div, and copy-pasted hr spacing. 
+
+![image](https://github.com/user-attachments/assets/c95c144e-74b6-431e-93a1-178bd4765b49)
+
+**base.html**
+
+![image](https://github.com/user-attachments/assets/191117e2-3f59-43cf-9dd9-cf8334c43846)
+
+**login.html**
+
+![image](https://github.com/user-attachments/assets/04479d8f-ee3b-48c2-9eb7-974d2431956d)
+
+**logout.html**
+
+![image](https://github.com/user-attachments/assets/9322f014-72e5-46b6-887b-6be3265a47e4)
+
+**signup.html**
+
+![image](https://github.com/user-attachments/assets/8dd1f799-89ec-4e7f-a6bc-827ef311d189)
+
+### CSS Validation
+
+![image](https://github.com/user-attachments/assets/067457f8-3488-428b-90b7-06feb943ed90)
+
+As seen above, there is an error with the font weight being logged as a font-size instead. 
+
+![image](https://github.com/user-attachments/assets/130617ad-ada4-4bd4-80a5-172ed517df65)
+
+### Responsivity Testing
+
+**Index**
+
+![image](https://github.com/user-attachments/assets/5fb8215a-45dd-48e9-b370-de20779f048b)
+
+![image](https://github.com/user-attachments/assets/a0de0394-4c48-4c15-944e-1166e47a0137)
+
+No errors found, classified as a pass.
+
+**Article View**
+
+![image](https://github.com/user-attachments/assets/2e82437a-4b47-4905-bdad-e4b30c1b31c4)
+
+![image](https://github.com/user-attachments/assets/2c79f916-0490-47cc-9bae-1c5d3993a50d)
+
+**Logout**
+
+![image](https://github.com/user-attachments/assets/e2162d64-8850-4594-b2e5-f93811ce8b75)
+
+**Login**
+
+![image](https://github.com/user-attachments/assets/34483bd7-263e-46e5-bdb0-7f8b8914c061)
+
+**Register**
+
+![image](https://github.com/user-attachments/assets/b46186cb-ae23-4db5-9557-0fbb95b10912)
+
+Font sizes automatically adjust to a vw through a media query. These have been tested on a mobile device (Google Pixel 3A), and they are legible on all devices.
+
+**Create account:** Pass
+**Log In:** Pass
+**Log Out:** Pass
+
+**Can a user log into the admin panel with a non-superuser account?**
+
+![image](https://github.com/user-attachments/assets/70a30400-23e3-43f8-9fab-b237ed5d3661)
+
+No.
+
+**Can a user that is signed in edit the records (in this case comments) of another user?**
+
+![image](https://github.com/user-attachments/assets/92800fc3-463c-45e0-8bbf-ee0358977dba)
+
+No. 
+
+### Deployment
+
+Version control for this app was conducted through GitHub. Coding was conducted using an IDE, in this instance Gitpod.
+
+You can view the deployed model on [Heroku here.](https://anchor-news-f16076c85235.herokuapp.com)
+
+## Licencing Rights and Attributions, Credits and Thank Yous
 
 Tools used:
+- Django
 - [Bootstrap](https://getbootstrap.com) (CC BY 3.0)
 - [Font Awesome](https://fontawesome.com/v4/icons/) (CC BY 3.0)
 - [Google Fonts](https://fonts.google.com) (SIL Open Font Licence)
-- [Pexels](https://www.pexels.com) (CC0)
+- W3C Schools Linting tools and validators
+- Heroku
+- Cloudinary (however, it went unused)
+- AllAuth
+- Whitenoise
+- Gunicorn
 
-## 9. Other Documents
+Due to an unfortunate series of mistakes, errors, and unfortunately timed life-events (allergic reaction), this project was restarted at a late minute. Due to this, some basic formatting and concepts were utilised based upon the "I Think Therefore I Blog" Code Institute tutorial. Where possible, changes have been made to aspects such as the model which was effectively rewritten, HTML, and the CSS. Although conceptually similar and similarly functioned, it is attempting to be distinct. Even getting this over the line was only made possible due to an extension, to which I must thank the Code Institute facilitators, particularly Lewis Dillon, for being understanding.
+
+The failed project can be [viewed here.](https://github.com/c-e-jones/birmingham-anchor) 
+
+The above project will be returned to with fresh eyes, in an attempt to make a pseudo-GIS project.
+
+Although not used in this project, I would also like to thank [Ryan Chung](https://www.youtube.com/watch?v=65flD9ScEQM&t=243s) for providing good instructions and demonstration of incorporating Mapbox into Django. In the previous failed project, this is what motivated me to make the attempt. The errors in that project were all my own.
