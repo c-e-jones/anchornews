@@ -17,24 +17,26 @@ for (let button of editButtons) {
   button.addEventListener("click", (e) => {
       // Get the comment ID from the button attribute
       let commentId = e.target.getAttribute("comment_id");
-      // Getting the comment body content
+      // Gets the comment body content
       let commentContent = document.getElementById(`comment${commentId}`).innerText;
-      // Navigate to the parent div of the comment body (the .comments div)
+      // Navigates to the parent element of the comment body
       let commentDiv = document.getElementById(`comment${commentId}`).parentElement;
-      // Get the comment title
-      let commentTitle = commentDiv.querySelector('h3').innerText;
-      // Get the comment review
-      let commentReview = commentDiv.querySelectorAll('p')[1].innerText;
-      // Populate the form fields with the retrieved values
+      // Gets the comment title
+      let commentTitle = commentDiv.previousElementSibling.innerText;
+      // A clumsy way of getting the comment review, by going down two divs
+      let reviewParagraph = commentDiv.nextElementSibling.nextElementSibling;
+      let commentReview = reviewParagraph.innerText;
+      // Populates the form fields with the retrieved values
       commentText.value = commentContent;
       commentTitleInput.value = commentTitle;
       commentReviewInput.value = commentReview;
-      // Update the submit button text to "Update"
+      // Updates the submit button text to "Update"
       submitButton.innerText = "Update";
-      // Set the form action to the appropriate edit URL
+      // Sets the form action to the appropriate edit URL
       commentForm.setAttribute("action", `edit_comment/${commentId}`);
   });
 }
+
 
 /**
 * This shows a delete modal. The modal will ask and confirm if the user wants to delete.
