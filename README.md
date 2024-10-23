@@ -262,6 +262,12 @@ No errors found, classified as a pass.
 
 Font sizes automatically adjust to a vw through a media query. These have been tested on a mobile device (Google Pixel 3A), and they are legible on all devices.
 
+### Manual Testing
+
+| Test | Expected Outcome | Result |
+|:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:-----:|
+| Can a user create an account with a unique username, password and an optional email address? | The user can create an account. | ✔ |
+
 **Create account:** Pass
 **Log In:** Pass
 **Log Out:** Pass
@@ -288,7 +294,7 @@ Secret keys are connected to Config Vars in Heroku.
 
 PostGres databse is connected via CodeInstitute.
 
-You can create your own version of Birmingham Anchor thusly...
+You can create your own version of Birmingham Anchor and deploying it to Heroku by forking the repo, and then...
 
 ### Heroku (Step 1)
 
