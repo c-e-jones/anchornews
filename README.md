@@ -262,27 +262,63 @@ No errors found, classified as a pass.
 
 Font sizes automatically adjust to a vw through a media query. These have been tested on a mobile device (Google Pixel 3A), and they are legible on all devices.
 
-### Manual Testing
+## Manual Testing
+
+### Basic Navigation
 
 | Test | Expected Outcome | Result |
 |:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:-----:|
-| Can a user create an account with a unique username, password and an optional email address? | The user can create an account. | ✔ |
+| The homepage displays a list of the most recent articles as links. | The homepage should display articles, to the count of 5, after which it paginates. | ✔ |
+| Pagination advancement | When scrolling down to the bottom of the page, the user should see a button titled "NEXT". Clicking on this button should take them to the next page in the list of articles. | ✔ |
+| Pagination URL | When on the second page or more of articles, the url for the website should reflect that they are on page-n, corresponding to their current page. | ✔ |
+| Pagination to previous | When on page two, scrolling down to the bottom of the page should also disaply a button titled "PREV". Clicking on this page should return the user to the previous page of articles. | ✔ |
+| Clicking on an article directs the user to the article page. | Upon clicking an article link, the user should be redirected to a page which contains the contents of the article under the article model. The page should have a unique slug, which reflects the title of the article. | ✔ |
+| Clicking on the site name "Birmingham Anchor" in the navbar should redirect the user to the home page. | The user should be taken from their current page back to the homepage. | ✔ |
+| Clicking on the "Home" button in the navbar should also redirect the user back to the home page. | The user should be taken from their current page back to the home page. | ✔ |
+| Clicking on the 'Register' in the navbar button should direct the user to the registration signup page. | The user should be taken to the registration signup page. | ✔ |
+| Clicking on the 'Login' in the navbar button should direct the user to the login page. | The user should be taken to the login page. | ✔ |
+| While logged in, the user should be able to see the "Log Out" button in the navbar. | The user should be able to see the "Log Out" button, but only while signed in. | ✔ |
+| Logging out | Clicking on the "Log Out" button should direct the user to a page where they are asked if they wish to log out. | ✔ |
 
-**Create account:** Pass
-**Log In:** Pass
-**Log Out:** Pass
+### Account Management
 
-**Can a user log into the admin panel with a non-superuser account?**
+| Test | Expected Outcome | Result |
+|:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:-----:|
+| Account creation. | The user can create an account, but only if it has a unique username and password which meets the criteria. They may also provide an email address. | ✔ |
+| Account creation prevention with same username | The user should be informed that a user with that username already exists, and should be prevented from creating an account. | ✔ |
+| Account creation prevention with mismatched passwords | The user should be informed that their passwords confirmation does not match the original password, and they will be prevented from creating an account. | ✔ |
+| Account creation prevention if password does not meet safety criteria. | The user should be informed which criteria they have failed (too similar to other submitted info, shorter than 8 chars, too common or entirely numeric), and they will be prevented from creating an account. | ✔ |
+| Login | The user can log into an existing account. | ✔ |
+| Login prevention | The user should be prevented from logging in if the username does not match the password information stored in the user database. | ✔ |
+| Remember Me | The user can select "Remember Me" to keep themselves logged in between sessions. | ✔ |
+| Logging Out | The user can log out. | ✔ |
+| The user should see the status of "Logged Out" next to the site name "Birmingham Anchor" in the navbar if they are not presently signed into an existing account. | They should see in smaller size font text next to the site name the text "Logged Out". | ✔ |
+| The user should see the tag of "User: USERNAME" next to the navbar title while logged in. | This information should change on a context-sensitive basis to display the username of the account logged in. | ✔ |
+| The user should not be able to see the "Log Out" in the navbar button when not signed into an account. | This button should not be visible when signed out, and should only see "Register" and "Login". | ✔ |
+| The user should not be able to see the "Register" or "Login" in the navbar while signed into an account. | They should only be able to see "Log Out" while viewing from this perspective. | ✔ |
+| Admin panel access | A superuser can log into the admin panel by adding /admin to the end of their URL, and inputting the correct login credentials. | ✔ |
+| Admin panel access restrictions | Non-superuser accounts are prevented from logging into the admin panel. | ✔ |
 
-![image](https://github.com/user-attachments/assets/70a30400-23e3-43f8-9fab-b237ed5d3661)
+### Commenting
 
-No.
+| Test | Expected Outcome | Result |
+|:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:-----:|
+| Comments being account-locked | If a user is not logged in, they will be requested to "Log in to leave a comment" in the comment field. | ✔ |
+| User can leave a comment if signed in. | Users can leave comments, if they are longer than 0 characters. | ✔ |
+| Users can see the option to edit and update their own comments. | If the user is signed into the account that left the comment, they can see a button below their comment asking if they wish to edit it. | ✔ |
+| Users can see the option to delete their own comments. | If a user is signed into the account that left the comment, they can see a button below their comment asking if they wish to delete it. | ✔ |
+| User cannot see option to edit or delete comments left by other users. | If the user is not logged into the account which left any other existing comments, they cannot see the buttons asking them if they wish to edit or delete their comment. | ✔ |
+| Editability | If the user clicks on the edit button for their own comment, the comment box field transforms into an update box. This will be prefilled with the text content of their previous comment, for ease of editing. | ✔ |
+| Delete modal | If the user clicks on the delete button of their own comment, a modal will appear asking the user if they really wish to delete the comment and that it cannot be undone. | ✔ |
 
-**Can a user that is signed in edit the records (in this case comments) of another user?**
-
-![image](https://github.com/user-attachments/assets/92800fc3-463c-45e0-8bbf-ee0358977dba)
-
-No. 
+### Messages
+| Test | Expected Outcome | Result |
+|:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:-----:|
+| Account created | The user will be informed via a message, which appears directly beneath the navbar, that they have signed in successfully to their new account. | ✔ |
+| Logged in | The user will be informed via a message, which appears directly beneath the navbar, that they have signed in successfully to their new account. | ✔ |
+| Logging out | The user will be informed via a message, which appears directly beneath the navbar, that they have logged out. | ✔ |
+| Comment editing | The user will be informed via message beneath the navbar that the comment that they left has been edited successfully. | ✔ |
+| Comment deletion | The user will be informed via a message beneath the navbar that the comment they left which they wish to delete has been successfully deleted. | ✔ |
 
 ## Deployment
 
