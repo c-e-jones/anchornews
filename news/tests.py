@@ -15,7 +15,7 @@ class TestPostViews(TestCase):
             email = "testemail@email.com"
         )
         self.post = Post(
-            title="Test title", slug="test-title",
+            title="Test title", slug='test-title',
             author=self.user, genre="Local Government, Local Government",
             byline="Test byline", body="Test body",
             created_on="2024-08-13")
@@ -23,7 +23,7 @@ class TestPostViews(TestCase):
 
     def test_article_page_with_comment_form(self):
         response = self.client.get(reverse(
-            args=['test-title']))
+            'article', args=['test-title']))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"Test title", response.content)
         self.assertIn(b"Test body", response.content)
