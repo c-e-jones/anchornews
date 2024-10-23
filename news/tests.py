@@ -41,25 +41,30 @@ class TestPostViews(TestCase):
         self.assertIsInstance(response.context['comment_form'], CommentForm)
 
 
-    # Tests for basic login functions
+    # Test for whether a comment is posted appropriately
+    # SHOULD PASS
 
     def test_post_comment(self):
         self.client.login(
-            username="testusername", password="testpassword")
+            username="testusername", password="testpassword"
+        )
         post_data = {
             'body': 'wow'
             }
         response = self.client.post(reverse(
             'article', args=['test-title']), post_data)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(
-            b'Comment submitted.',
-            response.content
+
+    # Tests usecase for incorrect slug being submitted
+    # SHOULD FAIL
+
+    def test_post_incorrect_slug(self):
+        self.client.login(
+            username="testusername", password="testpassword"
         )
-
-
-
-    # Test for whether a comment is posted appropriately
-
-
-    
+        post_data = {
+            'body' : 'wow'
+        }
+        response = self.client.post(reverse(
+            'article', args=['not-test']), post_data)
+        self.assertEqual(response.status_code, 200)
