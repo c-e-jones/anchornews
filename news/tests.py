@@ -9,7 +9,7 @@ from .models import Post, Comment
 class TestPostViews(TestCase):
     
     def setUp(self):
-        self.user = User.objects.creat_superuser(
+        self.user = User.objects.create_superuser(
             username = "testusername",
             password = "testpassword",
             email = "testemail@email.com"
