@@ -315,10 +315,15 @@ Font sizes automatically adjust to a vw through a media query. These have been t
 | Test | Expected Outcome | Result |
 |:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:-----:|
 | Account created | The user will be informed via a message, which appears directly beneath the navbar, that they have signed in successfully to their new account. | ✔ |
+| Account creation missing username | The user is notified that they need to fill in the username field to create an account. | ✔ |
+| Account creation missing password | The user is notified that they need to fill in the password field | ✔ |
 | Logged in | The user will be informed via a message, which appears directly beneath the navbar, that they have signed in successfully to their new account. | ✔ |
+| Login missing username | The user is notified that they need to fill in the username field. | ✔ |
+| Login missing password | The user is notified that they need to fill in the password field. | ✔ |
 | Logging out | The user will be informed via a message, which appears directly beneath the navbar, that they have logged out. | ✔ |
 | Comment editing | The user will be informed via message beneath the navbar that the comment that they left has been edited successfully. | ✔ |
 | Comment deletion | The user will be informed via a message beneath the navbar that the comment they left which they wish to delete has been successfully deleted. | ✔ |
+| Comment missing text | The user is notified that they need to fill the field in to submit a comment. | ✔ |
 
 ## Deployment
 
