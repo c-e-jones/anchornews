@@ -84,11 +84,9 @@
             <button class="btn btn-delete comment-button " comment_id="{{ comment.id }}">Delete</button>
             <button class="btn btn-edit comment-button" comment_id="{{ comment.id }}">Edit</button>
             {% if messages %}
-            <ul class="messages">
               {% for message in messages %}
-              <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+              <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</div>
                 {% endfor %}
-            </ul>
             {% endif %}
             {% endif %}
           </div>
