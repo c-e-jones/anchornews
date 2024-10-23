@@ -83,6 +83,13 @@
             {% if user.is_authenticated and comment.author == user %}
             <button class="btn btn-delete comment-button " comment_id="{{ comment.id }}">Delete</button>
             <button class="btn btn-edit comment-button" comment_id="{{ comment.id }}">Edit</button>
+            {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
             {% endif %}
           </div>
           <!-- End comment for loop -->
@@ -93,6 +100,7 @@
   </div>
 </div>
 
+
 <!-- Delete modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -102,7 +110,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        You are deleting this comment. 
+        You are deleting this comment.
         <br>
         <br>
         Are you sure this is what you want to do?
