@@ -67,9 +67,6 @@
           <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-            <h3>
-              {{ comment.comment_title }}
-            </h3>
             <p class="font-weight-bold">
               {{ comment.author }}
               <span class="font-weight-normal">
@@ -78,9 +75,6 @@
             </p>
             <div id="comment{{ comment.id }}">
               {{ comment.body | linebreaks }}
-            </div>
-            <div>
-              <p>This user reviews this article as: {{ comment.review }}</p>
             </div>
 
             <div>
