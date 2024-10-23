@@ -319,7 +319,7 @@ You can create your own version of Birmingham Anchor thusly...
 - Create your Procfile within the Django project. This should also be an independent file in the base, at the topmost directory level.
 - Configure your Procfile to run Gunicorn.
 
-## Heroku (Step 3)
+### Heroku (Step 3)
 
 - Go to the 'Deploy' tab, and deploy the branch.
 - If you have configured your repo correctly, this should deploy successfully. If not, check your errors and correct them in the repo.
