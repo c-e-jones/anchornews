@@ -2,18 +2,24 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+
 <div class="masthead">
   <div class="container-fluid">
     <div class="row">
       <div class="col-1 marginator-left-title"></div>
       <div class="col-10 achor-text">
-        <h1 class="article-title">{{ post.title }}</h1>
-        <p class="article-byline">{{ post.byline }}</p>
-        <p class="article-attributes">{{ post.author }} | {{ post.genre }}</p>
-      </div>
-      <div class="col-1 marginator-right-title"></div>
+        {% if messages %}
+        {% for message in messages %}
+        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>Notice: {{ message }}</div>
+      {% endfor %}
+      {% endif %}
+      <h1 class="article-title">{{ post.title }}</h1>
+      <p class="article-byline">{{ post.byline }}</p>
+      <p class="article-attributes">{{ post.author }} | {{ post.genre }}</p>
     </div>
+    <div class="col-1 marginator-right-title"></div>
   </div>
+</div>
 </div>
 
 
@@ -83,11 +89,6 @@
             {% if user.is_authenticated and comment.author == user %}
             <button class="btn btn-delete comment-button " comment_id="{{ comment.id }}">Delete</button>
             <button class="btn btn-edit comment-button" comment_id="{{ comment.id }}">Edit</button>
-            {% if messages %}
-              {% for message in messages %}
-              <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</div>
-                {% endfor %}
-            {% endif %}
             {% endif %}
           </div>
           <!-- End comment for loop -->
