@@ -13,6 +13,10 @@
     min-height: 150vh;
 }
 
+.message-box {
+        background-color: #c0d7ff;
+}
+
 /*** text styling ***/
 
 .nav-text-title {
@@ -155,6 +159,12 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: 100;
     font-size: 12px;
+}
+
+.message-display {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
 }
 
 /*** Nav inner element positioning ***/

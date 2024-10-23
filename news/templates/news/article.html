@@ -10,7 +10,9 @@
       <div class="col-10 achor-text">
         {% if messages %}
         {% for message in messages %}
-        <div{% if message.tags %} class="{{ message.tags }}" {% endif %}>Notice: {{ message }}</div>
+        <div{% if message.tags %} class="{{ message.tags }} message-box d-flex justify-content-center" {% endif %}>
+          <p class="message-display">Notice: {{ message }}</p>
+        </div>
       {% endfor %}
       {% endif %}
       <h1 class="article-title">{{ post.title }}</h1>
