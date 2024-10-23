@@ -24,13 +24,14 @@ def article(request, slug):
     ``article``
         an instance of :model:`blog.Post`
     template:
-    :template:`blog/article.html`
+    :template:`news/article.html`
     """
 
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by('-created_on')
     comment_count = post.comments.filter(approved=True).count()
+    template_name = 'news/article.html'
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
