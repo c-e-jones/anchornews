@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator
 
 # Create your models here.
 
@@ -22,6 +23,7 @@ REVIEW_CHOICES = [
 class Post(models.Model):
     # This is the data model for posts
     title = models.CharField(
+        validators = [MinLengthValidator(1)],
         max_length=150, unique=True,
         help_text='What is the title of this article?'
     )
@@ -47,10 +49,18 @@ class Post(models.Model):
             ("Arts and Culture", "Arts and Culture"),
             ("Finance", "Finance"),
             ("Crime", "Crime")
-        ], help_text="What genre of news is this article?", default="0")
-    byline = models.CharField(max_length=150, help_text="What is your byline?")
-    body = models.TextField()
-    created_on = models.DateTimeField(help_text="When was this posted?")
+        ], help_text="What genre of news is this article?", default="0"
+        )
+    byline = models.CharField(
+        validators = [MinLengthValidator(1)],
+        max_length=150, help_text="What is your byline?"
+        )
+    body = models.TextField(
+        validators = [MinLengthValidator(1)]
+    )
+    created_on = models.DateTimeField(
+        help_text="When was this posted?"
+        )
     updated_on = models.DateTimeField(
         auto_now=True, help_text="When was this updated?")
     objects = models.Manager()
@@ -70,10 +80,13 @@ class Comment(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='commenter')
     comment_title = models.CharField(
+        validators = [MinLengthValidator(1)],
         max_length=150, help_text="What is the main theme of your comment?")
     body = models.TextField(
+        validators = [MinLengthValidator(1)],
         max_length=600, help_text="What do you want to say in your comment?")
     review = models.CharField(
+        validators = [MinLengthValidator(1)],
         max_length=2, choices=REVIEW_CHOICES,
         help_text="How do you rate this article, where 10 is the best?")
     approved = models.BooleanField(default=True)
@@ -87,3 +100,5 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment {self.comment_title} by {self.author}'
+
+
