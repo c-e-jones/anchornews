@@ -278,11 +278,53 @@ No.
 
 No. 
 
-### Deployment
+## Deployment
 
 Version control for this app was conducted through GitHub. Coding was conducted using an IDE, in this instance Gitpod.
 
 You can view the deployed model on [Heroku here.](https://anchor-news-f16076c85235.herokuapp.com)
+
+Secret keys are connected to Config Vars in Heroku.
+
+PostGres databse is connected via CodeInstitute.
+
+You can create your own version of Birmingham Anchor thusly...
+
+### Heroku (Step 1)
+
+- Log into Heroku with a valid Heroku account
+- Through Heroku, create a new app by clicking "New" on the dashboard, then "Create New App"
+- Follow the instructions Heroku provides, selecting a unique name and a server region
+- Click 'Create App'
+- Connect your GitHub account to Heroku under "Deploy", selecting GitHub as the deployment method and connecting it to the GitHub repository
+
+### Django (Step 1)
+
+- Create your env.py file within the Django project. This should an independent file in the base - i.e., it should not be in any folders, at the topmost directory level.
+- Open your .gitignore file, and add the env.py file to the list of ignored files. This prevents the information you are about to put into the env.py from being posted to your repository when you push any changes to the repo. 
+- Configure your env.py file, importing the os, and setting up a SECRET_KEY and a DATABASE_URL.
+- Complete the settings.py file, connecting it to the env.py by importing it and set it up to receive your now-hidden SECRET_KEY and DATABASE_URL.
+
+### Heroku (Step 2)
+
+- Return to the application in Heroku, and go to the Settings.
+- Find your 'Config Vars', and reveal them.
+- In the new field that is revealed to you, input your SECRET_KEY, DATABASE_URL and any other external dependencies such as Cloudinary if you are using that.
+- You may also wish to include DISABLE_COLLECTSTATIC while editing your repo, and setting this to 1. If you do this, be sure to remove it before your final deployment.
+
+### Django (Step 2)
+
+- Back in Django, migrate your models.
+- Go to your settings.py file and configure your static files, template directories and add Heroku to your ALLOWED_HOSTS.
+- Create your Procfile within the Django project. This should also be an independent file in the base, at the topmost directory level.
+- Configure your Procfile to run Gunicorn.
+
+## Heroku (Step 3)
+
+- Go to the 'Deploy' tab, and deploy the branch.
+- If you have configured your repo correctly, this should deploy successfully. If not, check your errors and correct them in the repo.
+- Once successfully deployed, it will link to the live project.
+- Be sure to remove DISABLE_COLLECTSTATIC from your key:value pairs in Config Vars under settings. At this point, you should also ensure DEBUG is set to FALSE in your settings.py file. 
 
 ## Licencing Rights and Attributions, Credits and Thank Yous
 
