@@ -18,7 +18,7 @@ class TestPostViews(TestCase):
             title="test title", slug='test-title',
             author=self.user, genre="Local Government, Local Government",
             byline="Test byline", body="Test body",
-            created_on="2024-08-13"
+            created_on="2024-08-13", status=1
         )
         self.post.save()
 
