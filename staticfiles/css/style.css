@@ -16,6 +16,7 @@
 .message-box {
     background-color: #c0d7ff;
     min-width: auto;
+    margin-top: 25px;
     border-color: #1F71FF;
     border-style: dashed;
     border-radius: 20px;
